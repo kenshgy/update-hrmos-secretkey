@@ -1,0 +1,11 @@
+version: '3'
+services:
+  python:
+    build: ./image
+    image: selenium_python
+    container_name: selenium
+    tty: true
+    volumes:
+      - type: bind
+        source: "./src"
+        target: "/src"
